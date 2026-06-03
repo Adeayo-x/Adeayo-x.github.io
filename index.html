@@ -1,225 +1,163 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adeayo Adelooye</title>
-    <style>
-        * { box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: #333333;
-            background-color: #fcfcfc; /* Her exact clean canvas background */
-            line-height: 1.5;
-            margin: 0;
-            padding: 50px 30px;
-        }
-        .main-container {
-            max-width: 720px;
-            margin: 0 auto;
-        }
-        
-        /* Header Structure */
-        header { 
-            margin-bottom: 35px; 
-        }
-        h1 { margin: 0 0 5px 0; font-size: 2.1rem; color: #111111; font-weight: 700; letter-spacing: -0.5px; }
-        .email { color: #333333; font-size: 1.05rem; margin-bottom: 15px; font-family: -apple-system, sans-serif; }
-        .links { margin-bottom: 25px; }
-        .links a { color: #0066cc; text-decoration: none; margin-right: 15px; font-size: 1rem; }
-        .links a:hover { text-decoration: underline; }
-        
-        /* Paragraph Formatting - This creates her sleek text blocks */
-        p { 
-            font-size: 1.02rem; 
-            color: #333333; 
-            margin: 0 0 12px 0; 
-            text-align: justify;
-            text-justify: inter-word;
-        }
-        p a { color: #0066cc; text-decoration: none; }
-        p a:hover { text-decoration: underline; }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        /* Section Titles */
-        h2 { 
-            font-size: 1.45rem; 
-            margin-top: 45px; 
-            margin-bottom: 22px; 
-            color: #111111; 
-            font-weight: 700;
-            letter-spacing: -0.3px;
-        }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1f1f1f;
+    background-color: #fafafa;
+    margin: 0;
+    padding: 60px 24px;
+    line-height: 1.6;
+}
 
-        /* Work Experience Layout */
-        .experience-row {
-            display: flex;
-            margin-bottom: 26px;
-            align-items: flex-start;
-        }
-        .company-logo {
-            width: 44px;
-            height: 44px;
-            margin-top: 4px;
-            margin-right: 18px;
-            flex-shrink: 0;
-            object-fit: contain;
-        }
-        .row-content { 
-            flex-grow: 1; 
-        }
-        .position-title { 
-            font-size: 1.08rem; 
-            font-weight: 600; 
-            color: #111111; 
-            margin: 0; 
-        }
-        .meta-timeline { 
-            color: #555555; 
-            font-size: 0.95rem; 
-            font-weight: 400; 
-            margin: 2px 0 6px 0; 
-        }
-        
-        /* Publications & Project Layouts */
-        .list-item { 
-            margin-bottom: 22px; 
-        }
-        .list-item h3 { 
-            font-size: 1.05rem; 
-            font-weight: 600; 
-            color: #111111; 
-            margin: 0 0 3px 0; 
-        }
-        .list-item .sub-meta { 
-            color: #555555; 
-            font-size: 0.95rem; 
-            margin-bottom: 3px; 
-        }
-        .list-item .sub-meta a { 
-            color: #0066cc; 
-            text-decoration: none; 
-        }
-        .list-item .sub-meta a:hover { 
-            text-decoration: underline; 
-        }
-        .list-item .authors { 
-            font-size: 0.95rem; 
-            color: #444444; 
-        }
-        .list-item .authors em { 
-            font-style: normal; 
-            font-weight: 600; 
-            color: #000000; 
-        }
+/* Layout */
+.main-container {
+    max-width: 760px;
+    margin: 0 auto;
+}
 
-        /* Floating Circular Resume Badge */
-        .resume-badge {
-            position: fixed;
-            bottom: 35px;
-            right: 35px;
-            width: 46px;
-            height: 46px;
-            background-color: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            cursor: pointer;
-            text-decoration: none;
-            transition: transform 0.15s ease;
-        }
-        .resume-badge:hover { transform: scale(1.05); }
-        .resume-badge svg { width: 20px; height: 20px; fill: #e11d48; }
+/* Header */
+h1 {
+    font-size: 2.2rem;
+    font-weight: 750;
+    letter-spacing: -0.6px;
+    margin: 0 0 6px 0;
+    color: #111;
+}
 
-        footer {
-            margin-top: 60px;
-            font-size: 0.85rem;
-            color: #777777;
-            padding-top: 15px;
-        }
-    </style>
-</head>
-<body>
+.email {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 14px;
+}
 
-<div class="main-container">
+.links a {
+    color: #2563eb;
+    text-decoration: none;
+    margin-right: 14px;
+    font-size: 0.98rem;
+}
 
-    <header>
-        <h1>Adeayo Adelooye</h1>
-        <div class="email">adelooya@myumanitoba.ca</div>
-        <div class="links">
-            <a href="resume.pdf" target="_blank">Résumé</a>
-            <a href="https://linkedin.com/in/adeayo-adelooye" target="_blank">LinkedIn</a>
-            <a href="https://github.com/Adeayo-x" target="_blank">GitHub</a>
-        </div>
-        <p class="bio-paragraph">
-           [This page is currently under construction.] I am a [Your Academic Standing, e.g., student at the University of Manitoba] majoring in [Your Major] and focusing on [Your Focus Area]. I am currently focusing my research and practical studies under [Optional Mentor Name or Framework].
-        </p>
-        <p class="bio-paragraph">
-            My professional experience spans [Highlight Area 1], [Highlight Area 2], and structural development systems within [Highlight Area 3].
-        </p>
-    </header>
+.links a:hover {
+    text-decoration: underline;
+}
 
-    <h2>Work Experience</h2>
-    
-    <div class="experience-item">
-        <img class="company-logo" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230284c7'/><text x='50%23' y='58%23' font-family='sans-serif' font-size='32' fill='white' text-anchor='middle'>💼</text></svg>" alt="Logo">
-        <div class="item-content">
-            <h3 class="item-title">[Job Title / Internship Position]</h3>
-            <div class="item-subtitle">[Company/Institution Name] &nbsp;•&nbsp; [Start Month Year] - Present</div>
-            <p class="item-description">
-                Built and engineered strategic framework optimizations resulting in a <strong>[94.88%]</strong> baseline enhancement metrics. Automated core transaction protocols via targeted scripts, lowering process times down from weeks to <strong>[two days]</strong>.
-            </p>
-        </div>
-    </div>
+/* Bio */
+.bio-paragraph {
+    margin-top: 10px;
+    color: #333;
+    font-size: 1.02rem;
+    max-width: 70ch;
+}
 
-    <div class="experience-item">
-        <img class="company-logo" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><rect width='100' height='100' fill='%234b5563'/><text x='50%23' y='58%23' font-family='sans-serif' font-size='32' fill='white' text-anchor='middle'>📉</text></svg>" alt="Logo">
-        <div class="item-content">
-            <h3 class="item-title">[Junior Role / Research Assistant]</h3>
-            <div class="item-subtitle">[Company or University Name] &nbsp;•&nbsp; [Start Date] - [End Date]</div>
-            <p class="item-description">
-                Conducted large scale optimization analysis on asset parameters, contributing directly to resource scaling operations and saving over <strong>[$0.6M]</strong> in annual overhead metrics.
-            </p>
-        </div>
-    </div>
+/* Sections */
+h2 {
+    margin-top: 48px;
+    margin-bottom: 18px;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #111;
+    letter-spacing: -0.3px;
+}
 
-    <h2>Publications</h2>
-    
-    <div class="list-block">
-        <h3>[Title of Research Paper or Major Thesis Report]</h3>
-        <div class="meta-line"><a href="#">[Conference / Journal Name, Location]</a> &nbsp;•&nbsp; [Month Year]</div>
-        <div class="additional-details">Co-Author 1, Co-Author 2, <em>[Your Name]</em>, Co-Author 3</div>
-    </div>
+/* EXPERIENCE CARD */
+.experience-item {
+    display: flex;
+    gap: 16px;
+    padding: 14px 0;
+}
 
-    <h2>Insights & Projects</h2>
-    
-    <div class="list-block">
-        <h3>[Title of Major Project, Blog Post, or Deep-Dive Case Study]</h3>
-        <div class="meta-line"><a href="#">[Platform / Medium Publication Channel]</a> &nbsp;•&nbsp; [Month Year]</div>
-        <div class="additional-details">Written by <em>[Your Name]</em></div>
-    </div>
+.company-logo {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    margin-top: 2px;
+}
 
-    <h2>Teaching</h2>
-    
-    <div class="list-block">
-        <h3>[Course Number, e.g., COMP 1010]: [Course Name Title]</h3>
-        <div class="meta-line">[University of Manitoba] &nbsp;•&nbsp; [Term, e.g., January 2026 - Present]</div>
-        <p class="item-description" style="margin-top:2px;">Briefly summarize your core teaching scope here—problem formulation, frameworks, tools taught, or volume of student lab groups managed.</p>
-    </div>
+.item-content {
+    flex: 1;
+}
 
-    <footer>
-        © Adeayo Adelooye. Last updated June 2026.
-    </footer>
+.item-title {
+    font-size: 1.05rem;
+    font-weight: 650;
+    margin: 0;
+    color: #111;
+}
 
-</div>
+.item-subtitle {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 2px 0 6px 0;
+}
 
-<a href="resume.pdf" class="pdf-badge" title="Open Resume PDF" target="_blank">
-    <svg viewBox="0 0 24 24">
-        <path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm0-3H9V6h10v2zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z"/>
-    </svg>
-</a>
+.item-description {
+    font-size: 0.98rem;
+    color: #333;
+    margin: 0;
+    max-width: 75ch;
+}
 
-</body>
-</html>
+/* LIST BLOCKS (Publications, Projects, Teaching) */
+.list-block {
+    margin-bottom: 20px;
+}
+
+.list-block h3 {
+    margin: 0 0 4px 0;
+    font-size: 1.02rem;
+    font-weight: 650;
+}
+
+.meta-line {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+.additional-details {
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* LINKS */
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 70px;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* RESUME BUTTON FIX */
+.pdf-badge {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    transition: transform 0.15s ease;
+}
+
+.pdf-badge:hover {
+    transform: scale(1.05);
+}
+</style>

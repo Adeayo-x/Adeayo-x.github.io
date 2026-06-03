@@ -9,78 +9,85 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             color: #333333;
-            background-color: #fcfcfc;
+            background-color: #f6f8fa; /* Soft off-white background just like hers */
             line-height: 1.5;
             margin: 0;
             padding: 40px 20px;
         }
         .container {
-            max-width: 800px;
+            max-width: 740px;
             margin: 0 auto;
-            background: #ffffff;
-            border: 1px solid #eef0f2;
-            border-radius: 8px;
-            padding: 40px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
         }
         
-        /* Header Formatting */
-        header { margin-bottom: 35px; }
-        h1 { margin: 0 0 5px 0; font-size: 2.2rem; color: #111111; font-weight: 700; }
-        .email { color: #555555; font-size: 1.05rem; margin-bottom: 15px; font-family: monospace; }
+        /* Profile Header Block */
+        header { 
+            margin-bottom: 30px; 
+            padding: 10px 5px;
+        }
+        h1 { margin: 0 0 8px 0; font-size: 2.1rem; color: #111111; font-weight: 700; letter-spacing: -0.5px; }
+        .email { color: #555555; font-size: 1rem; margin-bottom: 18px; font-family: -apple-system, sans-serif; }
         .links { margin-bottom: 25px; }
-        .links a { color: #0066cc; text-decoration: none; margin-right: 15px; font-weight: 400; }
+        .links a { color: #0066cc; text-decoration: none; margin-right: 18px; font-weight: 400; font-size: 0.95rem; }
         .links a:hover { text-decoration: underline; }
-        .bio-paragraph { font-size: 1.02rem; color: #333333; margin-bottom: 12px; }
+        .bio-paragraph { font-size: 1rem; color: #333333; margin: 0 0 12px 0; }
         .bio-paragraph a { color: #0066cc; text-decoration: none; }
         .bio-paragraph a:hover { text-decoration: underline; }
 
         /* Section Break Headers */
         h2 { 
-            font-size: 1.45rem; 
-            margin-top: 45px; 
-            margin-bottom: 20px; 
+            font-size: 1.25rem; 
+            margin-top: 35px; 
+            margin-bottom: 16px; 
             color: #111111; 
             font-weight: 700;
-            border-bottom: 1px solid #eaeaea;
-            padding-bottom: 6px;
+            padding-left: 5px;
         }
 
-        /* Experience Item Blocks */
+        /* The Isolated White Cards Box Layout (This fixes the flat look) */
+        .card-section {
+            background: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 12px;
+            padding: 28px 32px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+            margin-bottom: 25px;
+        }
+
+        /* Experience Item Rows */
         .experience-item {
             display: flex;
-            margin-bottom: 28px;
+            margin-bottom: 32px;
             align-items: flex-start;
         }
         .experience-item:last-child { margin-bottom: 0; }
         
         .company-logo {
-            width: 48px;
-            height: 48px;
+            width: 44px;
+            height: 44px;
             margin-right: 20px;
             flex-shrink: 0;
-            border-radius: 6px;
+            border-radius: 8px;
             object-fit: contain;
             background: #fdfdfd;
-            border: 1px solid #eef0f2;
+            border: 1px solid #e1e4e8;
         }
         .item-content { flex-grow: 1; }
-        .item-title { font-size: 1.08rem; font-weight: 600; color: #111111; margin: 0; }
-        .item-subtitle { color: #555555; font-size: 0.95rem; font-weight: 500; margin: 2px 0 6px 0; }
-        .item-description { margin: 0; font-size: 0.98rem; color: #333333; text-align: justify; }
+        .item-title { font-size: 1.05rem; font-weight: 600; color: #111111; margin: 0; }
+        .item-subtitle { color: #586069; font-size: 0.92rem; font-weight: 500; margin: 3px 0 8px 0; }
+        .item-description { margin: 0; font-size: 0.95rem; color: #24292e; text-align: left; }
         .item-description strong { color: #000000; font-weight: 600; }
 
         /* Standard Structured Lists (Publications/Blogs/Teaching) */
-        .list-block { margin-bottom: 22px; }
+        .list-block { margin-bottom: 24px; }
         .list-block:last-child { margin-bottom: 0; }
-        .list-block h3 { font-size: 1.05rem; font-weight: 600; color: #111111; margin: 0 0 3px 0; }
-        .list-block .meta-line { color: #555555; font-size: 0.95rem; margin-bottom: 3px; }
-        .list-block .meta-line a { color: #0066cc; text-decoration: none; }
+        .list-block h3 { font-size: 1.02rem; font-weight: 600; color: #111111; margin: 0 0 4px 0; }
+        .list-block .meta-line { color: #586069; font-size: 0.92rem; margin-bottom: 4px; }
+        .list-block .meta-line a { color: #0066cc; text-decoration: none; font-weight: 500; }
         .list-block .meta-line a:hover { text-decoration: underline; }
-        .list-block .additional-details { font-size: 0.95rem; color: #444444; }
+        .list-block .additional-details { font-size: 0.92rem; color: #444444; }
         .list-block .additional-details em { font-style: normal; font-weight: 600; color: #000000; }
 
-        /* Floating Sticky PDF Icon (Bottom Right Viewport Edge) */
+        /* Floating Red PDF Icon Badge (Bottom Right corner) */
         .pdf-badge {
             position: fixed;
             bottom: 35px;
@@ -88,12 +95,12 @@
             width: 46px;
             height: 46px;
             background-color: #ffffff;
-            border: 1px solid #e2e8f0;
+            border: 1px solid #e1e4e8;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
             cursor: pointer;
             text-decoration: none;
             transition: transform 0.15s ease-in-out;
@@ -102,11 +109,11 @@
         .pdf-badge svg { width: 20px; height: 20px; fill: #e11d48; }
 
         footer {
-            margin-top: 55px;
+            margin-top: 60px;
             font-size: 0.85rem;
-            color: #777777;
-            border-top: 1px solid #eaeaea;
-            padding-top: 15px;
+            color: #6a737d;
+            padding: 15px 5px;
+            text-align: left;
         }
     </style>
 </head>
